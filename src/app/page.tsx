@@ -19,8 +19,8 @@ export default function Home() {
               <div className="flex">
                 <img className="w-20 h-20 rounded-full" src={member.image} alt={member.name} />
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold">{member.name}</h3>
-                  <p>{member.position}</p>
+                  <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                  <p className="text-white">{member.position}</p>
                   <a href={`mailto:${member.email}`} className="text-blue-500">{member.email}</a>
                 </div>
               </div>
