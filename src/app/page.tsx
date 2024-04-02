@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import teamMembers from './data/teamMembers';
+import Image from "next/image";
+import teamMembers from "./data/teamMembers";
 
 export default function Home() {
   return (
@@ -7,7 +7,9 @@ export default function Home() {
       <section className="h-screen flex items-center justify-center bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
         <div className="bg-white p-8 rounded-xl shadow-md">
           <h1 className="text-4xl font-bold text-gray-900">Dataism</h1>
-          <p className="text-gray-700">We serve the SaaS with analysis of rich data</p>
+          <p className="text-gray-700">
+            We offer SaaS featuring in-depth data analysis.
+          </p>
         </div>
       </section>
 
@@ -17,11 +19,19 @@ export default function Home() {
           {teamMembers.map((member) => (
             <div key={member.id} className="bg-black rounded-lg shadow-md p-4">
               <div className="flex">
-                <img className="w-20 h-20 rounded-full" src={member.image} alt={member.name} />
+                <img
+                  className="w-20 h-20 rounded-full"
+                  src={member.image}
+                  alt={member.name}
+                />
                 <div className="ml-4">
-                  <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                  <h3 className="text-xl font-bold text-white">
+                    {member.name}
+                  </h3>
                   <p className="text-white">{member.position}</p>
-                  <a href={`mailto:${member.email}`} className="text-blue-500">{member.email}</a>
+                  <a href={`mailto:${member.email}`} className="text-blue-500">
+                    {member.email}
+                  </a>
                 </div>
               </div>
             </div>
